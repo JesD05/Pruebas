@@ -1,0 +1,84 @@
+/* Estilos para el Header */
+.navbar {
+  background-color: #00247d;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-item {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.navbar-item:hover {
+  background-color: #cf142b;
+  color: #ffffff;
+}
+
+.navbar-burger span {
+  background-color: #ffffff;
+}
+
+/* Estilos para botones en el header */
+.navbar .buttons .button.is-primary {
+  background-color: #cf142b;
+  border-color: #cf142b;
+}
+
+.navbar .buttons .button.is-primary:hover {
+  background-color: #a50e2d;
+  border-color: #a50e2d;
+}
+
+/* Estilos para el Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content p {
+  margin: 10px 0;
+}
+
+.footer-content .social-media {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-content .social-media a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-content .social-media a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Responsividad para el Footer */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-content .social-media {
+    flex-direction: column;
+    align-items: center;
+  }
+}

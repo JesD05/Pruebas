@@ -1,0 +1,93 @@
+.programa-estudio {
+  padding: 4rem 1.5rem;
+  background-color: #edf2f8; /* Azul muy claro */
+}
+
+.programa-estudio .title {
+  font-size: 2.5rem;
+  color: #00247d; /* Azul oscuro */
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+}
+
+.programa-estudio .title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #d4352d; /* Rojo */
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.programa-info ul {
+  list-style-type: none; /* Eliminar viñetas predeterminadas */
+  padding-left: 0;
+  line-height: 1.8;
+  font-size: 1.125rem;
+  color: #333;
+  text-align: justify;
+}
+
+.programa-info ul li {
+  position: relative;
+  margin-bottom: 1rem;
+  padding-left: 1.75rem; /* Espacio para el ícono personalizado */
+}
+
+.programa-info ul li::before {
+  content: "\2022"; /* Carácter de viñeta */
+  color: #d4352d; /* Rojo */
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+}
+
+.programa-material .material-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.material-item {
+  text-align: center;
+  max-width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.material-item:hover {
+  transform: scale(1.05); /* Efecto de zoom */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+.image-container {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Hacer imágenes circulares */
+  overflow: hidden;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  background-color: #fff; /* Fondo blanco */
+  border: 2px solid #00247d; /* Borde azul oscuro */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.programa-material p {
+  font-size: 1rem;
+  color: #00247d; /* Azul oscuro */
+  font-weight: bold;
+}

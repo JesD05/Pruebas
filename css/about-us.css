@@ -1,0 +1,38 @@
+.section.about-us {
+  padding: 4rem 1.5rem;
+  background-color: #f0f0f5; /* Fondo gris muy claro */
+}
+
+.section.about-us .title {
+  color: #00247d; /* Azul oscuro */
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.section.about-us .content {
+  color: #00247d; /* Color azul medio */
+  line-height: 1.8;
+  font-size: 1.2rem; /* Tamaño de fuente más grande */
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.75rem;
+  text-align: justify;
+}
+
+.section.about-us .image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  transition: transform 0.3s ease;
+}
+
+.section.about-us .image:hover {
+  transform: scale(1.05); /* Zoom al pasar el mouse */
+}
+
+.section.about-us .image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}

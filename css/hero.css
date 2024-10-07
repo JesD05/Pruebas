@@ -1,0 +1,112 @@
+/* Calcula el espacio restante quitando la altura del header */
+.hero {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 60px); /* Suponiendo que el header mide 60px */
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px; /* Altura del header */
+  z-index: 10;
+}
+
+.hero-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen a la pantalla sin distorsionarse */
+}
+
+/* Estilo para el contenido del hero */
+.hero-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Fondo semi-transparente para resaltar el contenido */
+}
+
+/* Navegación de puntos */
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.is-active {
+  background-color: red;
+}
+
+/* Media Queries para ajustar el diseño en diferentes dispositivos */
+
+/* Dispositivos pequeños (celulares) */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh; /* El hero ocupa menos espacio en celulares */
+  }
+
+  .carousel-item img {
+    object-fit: contain; /* Ajuste de imagen para pantallas pequeñas */
+  }
+}
+
+/* Tablets y pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    height: 80vh; /* El hero ocupa un poco menos de espacio en tablets */
+  }
+}
+
+/* Pantallas grandes (PC y laptops) */
+@media (min-width: 1025px) {
+  .hero {
+    height: 100vh; /* El hero ocupa toda la pantalla */
+  }
+
+  .carousel-item img {
+    object-fit: cover; /* Ajuste para pantallas grandes */
+  }
+}

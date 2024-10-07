@@ -1,0 +1,92 @@
+/* Estilos para la sección de Call to Action */
+
+.cta-section {
+  background: linear-gradient(to bottom right, #0055b3 0%, #002244 100%);
+  padding: 4rem 1.5rem;
+  position: relative;
+}
+
+.cta-section::before,
+.cta-section::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #cf142b;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.cta-section:hover::before,
+.cta-section:hover::after {
+  opacity: 0.2;
+}
+
+.cta-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta-subtitle {
+  color: #f5f5f5;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta-content {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.cta-warning {
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.cta-details {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.cta-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.cta-icon {
+  height: 25px;
+  width: 25px;
+  fill: #cf142b;
+  margin-right: 15px;
+}
+
+.cta-schedule {
+  color: #cf142b;
+  font-weight: bold;
+}
+
+.cta-button {
+  color: #ffffff;
+  background-color: #e60000;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ffffff;
+  color: #e60000;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}

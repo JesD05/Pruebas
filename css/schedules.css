@@ -1,0 +1,70 @@
+.schedules {
+  padding: 4rem 0;
+  background-color: #f0f0f0; /* Fondo ligeramente más claro */
+}
+
+.schedules .title {
+  margin-bottom: 2.5rem;
+  color: #00247d; /* Color azul oscuro para el título */
+}
+
+.schedules-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.schedules-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 2;
+  margin: 0;
+  max-width: 600px; /* Ampliado el ancho máximo para mayor espacio */
+  width: 100%;
+}
+
+.schedules-list li {
+  background-color: #ffffff;
+  padding: 1.25rem;
+  border-radius: 12px; /* Bordes más redondeados */
+  margin-bottom: 1.5rem; /* Mayor separación entre elementos */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligeramente más intensa */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  position: relative; /* Para usar efectos como pseudo-elementos */
+  opacity: 0; /* Comienza como invisible */
+}
+
+.schedules-list li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #cf142b; /* Barra roja en el lado izquierdo de cada elemento */
+  border-radius: 12px 0 0 12px;
+}
+
+.schedules-list li:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Efecto de sombra más pronunciado al pasar el ratón */
+}
+
+.schedules-list strong {
+  color: #cf142b; /* Color rojo para los números */
+  font-weight: bold; /* Resalta aún más los números */
+  margin-right: 0.5rem; /* Espacio después del número */
+}
+
+.schedules-list span {
+  color: #3273dc; /* Azul para el texto "Virtual" */
+  font-style: italic; /* Italicización para mayor contraste */
+}
+
+/* Aplicar la animación de aparición con animate.css */
+.schedules-list li.animate__animated {
+  opacity: 1; /* Elemento visible cuando se anima */
+  transform: translateY(0);
+}

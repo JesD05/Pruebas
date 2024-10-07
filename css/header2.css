@@ -1,0 +1,163 @@
+/* General Navbar Styles */
+.navbar {
+  /*background-color: #00247d; /* Azul oscuro */
+  background: linear-gradient(
+    45deg,
+    #00247d,
+    #001f5b
+  ); /* Degradado azul oscuro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  color: #ffffff; /* Blanco */
+  font-weight: bold;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Líneas separadoras */
+}
+
+/* Ajuste de la imagen del logo */
+.navbar-item img {
+  height: auto;
+  max-height: 56px; /* Ajustar si es necesario según el tamaño del header */
+  margin: 0;
+}
+
+.navbar-burger span {
+  background-color: #ffffff; /* Blanco */
+}
+
+.navbar-burger:hover {
+  background-color: #cf142b; /* Rojo */
+  border-radius: 5px; /* Redondeamos las esquinas para el hover */
+}
+
+.navbar-dropdown {
+  background-color: #ffffff; /* Fondo blanco para contrastar */
+  border-top: 2px solid #00247d; /* Línea de separación */
+  border-radius: 0 0 5px 5px; /* Redondeamos las esquinas inferiores */
+}
+
+.navbar-dropdown .navbar-item {
+  color: #00247d; /* Azul oscuro */
+}
+
+.navbar-dropdown .navbar-item:hover {
+  background-color: #cf142b; /* Hover en rojo */
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+/* Separador en responsive */
+.navbar-item:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-item:hover {
+  background-color: transparent; /* Mantener limpio el hover sin fondo */
+  color: #cf142b; /* Texto rojo */
+  transition: color 0.3s ease; /* Animación suave */
+}
+
+.navbar .buttons .button.is-primary {
+  background-color: #cf142b; /* Rojo */
+  border-color: #cf142b;
+}
+
+.navbar .buttons .button.is-primary:hover {
+  background-color: #a50e2d; /* Rojo oscuro */
+  border-color: #a50e2d;
+}
+
+.navbar .buttons .button.is-light {
+  color: #00247d; /* Azul oscuro */
+  background-color: #f5f5f5; /* Gris claro */
+}
+
+.navbar .buttons .button.is-light:hover {
+  color: #cf142b; /* Rojo */
+  background-color: #e5e5e5; /* Gris claro */
+}
+.navbar-item.has-text-white:hover,
+.navbar-link.has-text-white:hover {
+  background-color: #cf142b; /* Rojo */
+  color: #ffffff; /* Blanco */
+}
+/* Responsive Navbar */
+/* Responsive Navbar */
+@media (max-width: 1023px) {
+  .navbar-menu {
+    display: none; /* Escondemos el menú en pantallas pequeñas */
+  }
+
+  .navbar-menu.is-active {
+    display: block; /* Mostramos el menú cuando se active */
+    background-color: #00247d; /* Fondo azul oscuro */
+    padding: 10px; /* Espaciado en el menú para dispositivos móviles */
+  }
+
+  .navbar-dropdown {
+    background-color: #00247d; /* Azul oscuro */
+    padding: 10px;
+    border-top: none; /* Quitamos la línea superior */
+  }
+
+  .navbar-dropdown .navbar-item {
+    color: #ffffff; /* Texto blanco */
+  }
+
+  .navbar-dropdown .navbar-item:hover {
+    background-color: #cf142b; /* Rojo */
+    color: #ffffff;
+  }
+
+  .navbar-item {
+    color: #ffffff; /* Blanco */
+    padding: 10px; /* Espaciado adecuado para el texto en móviles */
+  }
+
+  .navbar-item:hover {
+    background-color: transparent; /* Sin fondo en el hover */
+    color: #cf142b; /* Texto rojo */
+  }
+
+  .navbar-burger {
+    margin-right: 20px; /* Margen para que no quede pegado a la derecha */
+  }
+
+  .navbar-burger span {
+    background-color: #ffffff; /* Blanco */
+  }
+
+  .navbar-burger:hover {
+    background-color: transparent; /* Fondo transparente al hacer hover */
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center; /* Centramos los botones en móviles */
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 10px;
+  }
+
+  .navbar-item.has-dropdown .navbar-dropdown.is-boxed {
+    margin-left: 0; /* Alineación completa en pantallas pequeñas */
+    padding-left: 0; /* Ajustar padding */
+  }
+}
+
+/* Media Query para pantallas más grandes que 1023px */
+@media (min-width: 1024px) {
+  .navbar-menu {
+    display: flex;
+  }
+
+  .navbar-burger {
+    display: none; /* Oculta el menú tipo burger */
+  }
+}
