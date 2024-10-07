@@ -5,26 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/BritishCenter/public/css/bulma.min.css">
-    <link rel="stylesheet" href="/BritishCenter/public/css/animate.min.css">
-    <link rel="stylesheet" href="/BritishCenter/public/css/header2.css">
-    <link rel="stylesheet" href="/BritishCenter/public/css/hero.css">
-    <link rel="stylesheet" href="/BritishCenter/public/css/style.css">
-    <link rel="stylesheet" href="/BritishCenter/public/css/wp-button.css">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/header2.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/wp-button.css">
 
 
 </head>
 
 <body>
 
-    <?php include_once __DIR__ . '/../inc/header.php'; ?>
+    <!-- HEADER -->
+<nav class="navbar has-shadow" role="navigation" aria-label="main navigation" style="background-color: #00247D;">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.php">
+                <img src="/BritishCenter/public/img/logo.png" alt="British Center Logo" width="28" height="28">
+                <span style="color: #FFFFFF; font-weight: bold; font-size: 1.5em; margin-left: 10px;">British Center</span>
+            </a>
+
+            <!-- Responsive Burger -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item has-text-white" href="index.php">
+                    Home
+                </a>
+                <a class="navbar-item has-text-white" href="#">
+                    Estudiantes
+                </a>
+
+                <!-- Dropdown with Hover Effect -->
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link has-text-white">
+                        Usuarios
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="#">
+                            Registrar un nuevo usuario
+                        </a>
+                        <a class="navbar-item" href="#">
+                            Listar Usuarios
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" style="background-color: #CF142B; border-color: #CF142B;">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
 
     <!-- HERO -->
     <section class="hero is-primary">
         <div class="hero-carousel">
             <!-- Slider Items -->
             <div class="carousel-item is-active">
-                <img src="/BritishCenter/public/img/banner_1.png" alt="Banner 1" loading="lazy" />
+                <img src="img/banner_1.png" alt="Banner 1" loading="lazy" />
                 <div class="hero-body">
                     <div class="container has-text-centered">
                         <!-- Banner 1 Content -->
@@ -33,7 +89,7 @@
             </div>
 
             <div class="carousel-item">
-                <img src="/BritishCenter/public/img/banner_2.png" alt="Banner 2" loading="lazy" />
+                <img src="img/banner_2.png" alt="Banner 2" loading="lazy" />
                 <div class="hero-body">
                     <div class="container has-text-centered">
                     </div>
@@ -41,7 +97,7 @@
             </div>
 
             <div class="carousel-item">
-                <img src="/BritishCenter/public/img/banner_3.png" alt="Banner 3" loading="lazy" />
+                <img src="img/banner_3.png" alt="Banner 3" loading="lazy" />
                 <div class="hero-body">
                     <div class="container has-text-centered">
                     </div>
@@ -77,9 +133,9 @@
     </a>
 
 
-    <script src="/BritishCenter/public/js/animacion.js"></script>
-    <script src="/BritishCenter/public/js/hero.js"></script>
-    <script src="/BritishCenter/public/js/wp_button.js"></script>
+    <script src="js/animacion.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/wp_button.js"></script>
 
 </body>
 
